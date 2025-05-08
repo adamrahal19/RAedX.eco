@@ -1,0 +1,181 @@
+
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAdeX | نختصر الزمن، ونصنع الثمن</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00bfff;
+            --bg-light: #ffffff;
+            --bg-dark: #0b1b2a;
+            --text-light: #ffffff;
+            --text-dark: #111111;
+        }
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.light-mode {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+        header {
+            background-color: var(--bg-dark);
+            color: var(--primary-color);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        body.light-mode header {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        nav a {
+            color: inherit;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .toggle-mode {
+            background: none;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .hero {
+            background-color: #0f2d45;
+            color: var(--text-light);
+            text-align: center;
+            padding: 100px 20px;
+        }
+        body.light-mode .hero {
+            background-color: #e0f7ff;
+            color: var(--text-dark);
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .categories, .featured {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .categories h2, .featured h2 {
+            margin-bottom: 30px;
+        }
+        .cat-grid, .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .category, .product {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            color: #111;
+        }
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--primary-color);
+            padding: 30px 20px;
+            text-align: center;
+        }
+        body.light-mode footer {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">RAdeX</div>
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">من نحن</a>
+            <a href="#">المتجر</a>
+            <a href="#">العروض</a>
+            <a href="#">اتصل بنا</a>
+            <button class="toggle-mode" onclick="toggleMode()">تبديل الوضع</button>
+        </nav>
+    </header><section class="hero">
+    <h1>نختصر الزمن، ونصنع الثمن.</h1>
+    <button>تسوّق الآن</button>
+</section>
+
+<section class="categories">
+    <h2>تصفح حسب الفئة</h2>
+    <div class="cat-grid">
+<div class="category">
+            <img src="https://via.placeholder.com/200x150" alt="إلكترونيات">
+            <p>إلكترونيات</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/200x150" alt="ملابس">
+            <p>ملابس</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/200x150" alt="ديكور">
+            <p>ديكور</p>
+        </div>
+        <div class="category">
+            <img src="https://via.placeholder.com/200x150" alt="عروض خاصة">
+            <p>عروض خاصة</p>
+        </div>
+    </div>
+</section>
+
+<section class="featured">
+    <h2>منتجات مختارة</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="https://via.placeholder.com/200x200" alt="منتج 1">
+            <p>اسم المنتج</p>
+            <button>أضف إلى السلة</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200x200" alt="منتج 2">
+            <p>اسم المنتج</p>
+            <button>أضف إلى السلة</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200x200" alt="منتج 3">
+            <p>اسم المنتج</p>
+            <button>أضف إلى السلة</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    جميع الحقوق محفوظة © RAdeX 2025
+</footer>
+
+<script>
+    function toggleMode() {
+        document.body.classList.toggle("light-mode");
+    }
+</script>
+
+</body>
+</html>
